@@ -1,4 +1,4 @@
-### ENCODER 8TO3 DATAFLOW Modelling
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f20ea011-de8b-4ed4-a006-3f244720e64e" />### ENCODER 8TO3 DATAFLOW Modelling
 
 **AIM:**
 
@@ -39,30 +39,24 @@ Figure 02  Encoder 8 * 3
 /* write all the steps invloved */
 
 **PROGRAM**
-module encoder4to2 (
-    input  wire [3:0] in,   // 4 input lines
-    output reg  [1:0] out   // 2 output lines
-);
-    always @(*) begin
-        case (in)
-            4'b0001: out = 2'b00;
-            4'b0010: out = 2'b01;
-            4'b0100: out = 2'b10;
-            4'b1000: out = 2'b11;
-            default: out = 2'bxx;  // Invalid case
-        endcase
-    end
+module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
 endmodule
-
 
 Developed by:Madhumitha V RegisterNumber:25016067
 
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-<img width="1919" height="1079" alt="Screenshot 2025-11-28 213048" src="https://github.com/user-attachments/assets/d3742775-0be5-449d-8df4-9c0baa94cd66" />
+<img width="1919" height="1075" alt="Screenshot 2025-12-05 221504" src="https://github.com/user-attachments/assets/6d2032ee-09aa-4d93-ba45-89c81363bb74" />
+
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-<img width="1919" height="1075" alt="Screenshot 2025-11-28 213437" src="https://github.com/user-attachments/assets/9bcf9973-ed2a-4f66-b104-bc0c20e9546a" />
+<img width="1919" height="1079" alt="Screenshot 2025-12-05 221825" src="https://github.com/user-attachments/assets/83af86da-1edd-4c5d-8d66-85d09a897e4e" />
+
 
 **RESULTS**
 Thus the 8 to 3 encoder is designed and the truth table is verified using Quartus software.
