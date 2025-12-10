@@ -35,8 +35,13 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
+1.Create module with 8 inputs and 3 outputs.
 
-/* write all the steps invloved */
+2.Use dataflow (assign statements) to describe output equations.
+
+3.Write logic equations for Y2, Y1, Y0 using OR operations.
+
+4.End the module.
 
 **PROGRAM**
 module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
